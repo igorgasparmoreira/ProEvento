@@ -1,6 +1,7 @@
 <h2>Eventos</h2>
 <hr>
 
+<<<<<<< HEAD
 <div action="" >
     <div class="form-group mb-2">
         <label class="mr-2">Filtro: </label>
@@ -13,13 +14,34 @@
 </div>
 
 <!--<h3>Filtro: {{filtroLista}}</h3>-->
+=======
+<div class="form-inline">
+    <div class="form-group mb-2">
+
+        <label class="mr-2">Filtro</label>
+
+        <input type="text" class="form-control mr-2" placeholder="buscar"
+        [(ngModel)]="filtroLista"
+        >
+        <!--<button class="btn btn-outline-success">Buscar</button>-->
+    </div>
+</div>
+
+<!--<h3>Filtro: {{filtroLista}} </h3>-->
+>>>>>>> 8b440da961cd198999fe3886890b734974018d09
 
 <table class="table table-striped">
     <thead class="thead-dark">
         <tr>
             <th>
+<<<<<<< HEAD
                 <button type="button" class="btn btn-outline-light btn-sm" (click)="alterarImagem()">
                     {{!mostrarImagem ? 'mostrar': 'ocultar'}}
+=======
+                <button type="button" class="btn btn-outline-light btn-sm"
+                (click)="alterarImagem()">
+                    {{exibirImagem ? 'exibir' : 'ocultar'}}
+>>>>>>> 8b440da961cd198999fe3886890b734974018d09
                 </button>
             </th>
             <th>#</th>
@@ -34,6 +56,7 @@
     <tbody *ngIf="eventos && eventos.length">
         <tr *ngFor="let evento of eventosFiltrados">
 
+<<<<<<< HEAD
             <td>
                 <img [collapse]="!mostrarImagem" [isAnimated]="true" src="/assets/{{evento.imagmUrl}}" width="100px">
             </td>
@@ -49,6 +72,24 @@
               <button type="button" class="btn btn-danger btn-sm">Excluir</button>
             </td>
         </tr>
+=======
+            <td> <img [collapse]="!exibirImagem" 
+                [isAnimated]="true"
+                src="/assets/{{evento.imagmUrl}}" style="width: 50px;">
+            </td>
+
+            <td> {{evento.eventoId}} </td>          
+            <td> {{evento.tema}} </td>
+            <td> {{evento.local}} </td>
+            <td> {{evento.dataEvento}} </td>
+            <td> {{evento.qtdPessoas}} </td>
+            <td> {{evento.lote}} </td>   
+            <td>
+                <button type="button" class="btn btn-primary btn-sm mr-2">Editar</button>
+                <button type="button" class="btn btn-danger btn-sm">Excluir</button>
+            </td>         
+        </tr>  
+>>>>>>> 8b440da961cd198999fe3886890b734974018d09
     </tbody>
     <tfoot *ngIf="!eventos.length">
         <tr>
@@ -58,3 +99,17 @@
         </tr>
     </tfoot>
 </table>
+<<<<<<< HEAD
+=======
+
+<!--
+    Diretivas Estruturais
+    *ngFor
+        binding e interpolações
+    *ngIf
+        binding e interpolações
+    *ngShow
+        binding e interpolações
+
+ -->
+>>>>>>> 8b440da961cd198999fe3886890b734974018d09

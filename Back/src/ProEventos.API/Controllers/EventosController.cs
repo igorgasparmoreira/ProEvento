@@ -52,7 +52,5 @@ namespace ProEventos.API.Controllers
         {
             return $"Exemplo de DELETE com id = {id}";
         }
-
-
     }
 }
